@@ -7,7 +7,7 @@ function c(){
     ans,v = 0
     t = ""
     s,sb,m,d,e,n = false
-    document.getElementById("digit").innerText = 0
+    document.getElementById("digit").innerText = v
 }
 
 function sum(){
@@ -19,7 +19,7 @@ function sum(){
         e = false
         document.getElementById("digit").innerText = v
     }else{
-        v = ans
+        v += ans
         document.getElementById("digit").innerText = v
         ans = 0
     }
@@ -36,7 +36,7 @@ function sub(){
         e = false
         document.getElementById("digit").innerText = v
     }else{
-        v = ans
+        v -= ans
         document.getElementById("digit").innerText = v
         ans = 0
     }
@@ -53,7 +53,10 @@ function mul(){
         e = false
         document.getElementById("digit").innerText = v
     }else{
-        v = ans
+        if(v==0){
+            v = 1
+        }
+        v *= ans
         document.getElementById("digit").innerText = v
         ans = 0
     }
@@ -70,8 +73,13 @@ function div(){
         e = false
         document.getElementById("digit").innerText = v
     }else{
-        v = ans
-        document.getElementById("digit").innerText = v
+        if(v==0){
+            v = ans
+            document.getElementById("digit").innerText = v
+        }else{
+            v /= ans
+            document.getElementById("digit").innerText = v
+        }
         ans = 0
     }
     t = "" 
@@ -105,8 +113,6 @@ function digit(x){
     n = true
     t += x
     ans = +t
-    document.getElementById("digit").innerText = t
+    document.getElementById("digit").innerText = t 
 }
-
-
 
