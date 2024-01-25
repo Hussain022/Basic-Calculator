@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main">
+        <div class="display">
+            <p id="digit">0</p>
+        </div>
+        <div class="btn">
+            <button><a href="index.html">C</a></button>
+        </div>
+        <div class="buttons">
+            <button onclick="digit('7')">7</button>
+            <button onclick="digit('8')">8</button>
+            <button onclick="digit('9')">9</button>
+            <button onclick="equal()">=</button>
+        </div>
+        <div class="buttons">
+            <button onclick="digit('4')">4</button>
+            <button onclick="digit('5')">5</button>
+            <button onclick="digit('6')">6</button>
+            <button onclick="div()">/</button>
+        </div>
+        <div class="buttons">
+            <button onclick="digit('1')">1</button>
+            <button onclick="digit('2')">2</button>
+            <button onclick="digit('3')">3</button>
+            <button onclick="mul()">x</button>
+        </div>
+        <div class="buttons">
+            <button onclick="digit('0')">0</button>
+            <button onclick="digit('.')">.</button>
+            <button onclick="sum()">+</button>
+            <button onclick="sub()">-</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
