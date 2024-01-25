@@ -3,6 +3,13 @@ let v = 0
 let t = ""
 let s,sb,m,d,e,n = false
 
+function c(){
+    ans,v = 0
+    t = ""
+    s,sb,m,d,e,n = false
+    document.getElementById("digit").innerText = 0
+}
+
 function sum(){
     if(e==true){
         if(n==true){
@@ -84,6 +91,8 @@ function equal(){
     }else if(d==true){
         v /= ans
         d = false
+    }else{
+        v = ans
     }
     t = ""
     document.getElementById("digit").innerText = v
