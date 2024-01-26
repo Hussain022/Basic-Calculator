@@ -11,96 +11,106 @@ function c(){
 }
 
 function sum(){
-    if(e==true){
-        if(n==true){
-            n = false
-            v = ans
+    if(n==true){
+        if(e==true){
+            if(n==true){
+                n = false
+                v = ans
+            }
+            e = false
+            document.getElementById("digit").innerText = v
+        }else{
+            v += ans
+            document.getElementById("digit").innerText = v
+            ans = 0
         }
-        e = false
-        document.getElementById("digit").innerText = v
-    }else{
-        v += ans
-        document.getElementById("digit").innerText = v
-        ans = 0
     }
     t = ""
     s = true
 }
 
 function sub(){
-    if(e==true){
-        if(n==true){
-            n = false
-            v = ans
+    if(n==true){
+        if(e==true){
+            if(n==true){
+                n = false
+                v = ans
+            }
+            e = false
+            document.getElementById("digit").innerText = v
+        }else{
+            v -= ans
+            document.getElementById("digit").innerText = v
+            ans = 0
         }
-        e = false
-        document.getElementById("digit").innerText = v
-    }else{
-        v -= ans
-        document.getElementById("digit").innerText = v
-        ans = 0
     }
     t = ""
     sb = true
 }
 
 function mul(){
-    if(e==true){
-        if(n==true){
-            n = false
-            v = ans
+    if(n==true){
+        if(e==true){
+            if(n==true){
+                n = false
+                v = ans
+            }
+            e = false
+            document.getElementById("digit").innerText = v
+        }else{
+            if(v==0){
+                v = 1
+            }
+            v *= ans
+            document.getElementById("digit").innerText = v
+            ans = 0
         }
-        e = false
-        document.getElementById("digit").innerText = v
-    }else{
-        if(v==0){
-            v = 1
-        }
-        v *= ans
-        document.getElementById("digit").innerText = v
-        ans = 0
     }
     t = ""
     m = true
 }
 
 function div(){
-    if(e==true){
-        if(n==true){
-            n = false
-            v = ans
-        }
-        e = false
-        document.getElementById("digit").innerText = v
-    }else{
-        if(v==0){
-            v = ans
+    if(n==true){
+        if(e==true){
+            if(n==true){
+                n = false
+                v = ans
+            }
+            e = false
             document.getElementById("digit").innerText = v
         }else{
-            v /= ans
-            document.getElementById("digit").innerText = v
+            if(v==0){
+                v = ans
+                document.getElementById("digit").innerText = v
+            }else{
+                v /= ans
+                document.getElementById("digit").innerText = v
+            }
+            ans = 0
         }
-        ans = 0
     }
     t = "" 
     d = true
 }
 
 function equal(){
-    if(s==true){
-        v += ans
-        s = false
-    }else if(sb==true){
-        v -= ans
-        sb = false
-    }else if(m==true){
-        v *= ans
-        m = false
-    }else if(d==true){
-        v /= ans
-        d = false
-    }else{
-        v = ans
+    if(n==true){
+        if(s==true){
+            v += ans
+            s = false
+        }else if(sb==true){
+            v -= ans
+            sb = false
+        }else if(m==true){
+            v *= ans
+            m = false
+        }else if(d==true){
+            v /= ans
+            d = false
+        }else{
+            v = ans
+        }
     }
     t = ""
     document.getElementById("digit").innerText = v
